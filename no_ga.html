@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NFC NetKey – Coming Soon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 50px auto; background: #fff; padding: 20px 30px; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 10px; }
+        h1 { text-align: center; }
+        p { text-align: center; color: #555; }
+        form { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
+        input, select { padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }
+        button { padding: 10px; font-size: 18px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .footer { text-align: center; margin-top: 30px; font-size: 14px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>NFC NetKey</h1>
+        <p>Будь первым, кто получит доступ к нашему инновационному продукту для удобного NFC-общения. Оставь e-mail и страну — и получи скидку!</p>
+        <form action="https://formspree.io/f/xyzeoovy" method="POST">
+            <input type="email" name="email" placeholder="Ваш e-mail" required>
+            <select name="country" required>
+                <option value="">Выберите страну</option>
+                <option value="Germany">Германия</option>
+                <option value="Ukraine">Украина</option>
+                <option value="Other">Другая</option>
+            </select>
+            <input type="text" name="city" placeholder="Ваш город (необязательно)">
+            <button type="submit">Хочу скидку</button>
+        </form>
+        <div class="footer">
+            NFC NetKey © 2025
+        </div>
+    </div>
+
+    <!-- Google Analytics (вставь свой ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    </script>
+</body>
+</html>
