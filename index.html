@@ -3,12 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NFC NetKey</title>
+  <title>WTFtag - Epic Phone Pranks</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
     body { background: #f8f9fa; color: #212529; line-height: 1.6; }
-    header { padding: 2rem; text-align: center; font-size: 2rem; font-weight: 800; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    header { 
+      padding: 2rem; 
+      text-align: center; 
+      font-size: 2.5rem; 
+      font-weight: 800; 
+      background: #fff; 
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .logo-text {
+  display: inline-block;
+  font-size: 3.5rem;
+  background: linear-gradient(270deg, #FF4500, #FF7F50, #1E90FF, #32CD32, #FF4500);
+  background-size: 1000% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  animation:
+    gradientShift 5s ease infinite,
+    flyAround 8s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes flyAround {
+  0%   { transform: translateX(-150%) rotate(-10deg); opacity: 0; }
+  10%  { transform: translateX(0%) rotate(0deg); opacity: 1; }
+  45%  { transform: translateX(0%) rotate(0deg); opacity: 1; }
+  55%  { transform: translateX(150%) rotate(10deg); opacity: 0; }
+  100% { transform: translateX(-150%) rotate(-10deg); opacity: 0; }
+}
+    @keyframes wobble {
+      0%, 100% { transform: translateX(0); }
+      15% { transform: translateX(-5px) rotate(-5deg); }
+      30% { transform: translateX(4px) rotate(3deg); }
+      45% { transform: translateX(-3px) rotate(-2deg); }
+      60% { transform: translateX(2px) rotate(1deg); }
+      75% { transform: translateX(-1px) rotate(-1deg); }
+    }
     .container { max-width: 1000px; margin: auto; padding: 2rem; }
     .hero { display: flex; gap: 2rem; flex-wrap: wrap; align-items: center; justify-content: center; }
     .hero-info { flex: 1; min-width: 300px; }
@@ -17,12 +60,14 @@
     .hero-info .price { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; }
     .form { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
     .form input { width: 100%; padding: 0.75rem; margin-bottom: 1rem; border: 1px solid #ced4da; border-radius: 5px; }
-    .form button { background: #007bff; color: #fff; border: none; padding: 0.75rem; border-radius: 5px; width: 100%; font-weight: 600; cursor: pointer; }
+    .form button { background: #FF4500; color: #fff; border: none; padding: 0.75rem; border-radius: 5px; width: 100%; font-weight: 600; cursor: pointer; }
     .section { margin-top: 4rem; }
     .section h2 { font-size: 1.8rem; margin-bottom: 1rem; }
     .section p, .section ul { margin-bottom: 1rem; }
     .video { margin-top: 2rem; text-align: center; }
     iframe { width: 100%; max-width: 800px; height: 450px; border: none; border-radius: 10px; }
+    .emoji { font-size: 1.5rem; }
+    .discount-banner { background: #FFE900; color: #333; padding: 0.75rem; text-align: center; font-weight: 600; border-radius: 5px; margin-bottom: 1rem; }
     
     /* Gallery Styles */
     .gallery {
@@ -66,7 +111,7 @@
     }
     
     .gallery-dot.active {
-      background: #007bff;
+      background: #FF4500;
     }
     
     .gallery-btn {
@@ -103,28 +148,32 @@
   </script>
 </head>
 <body>
-  <header>NFC NetKey</header>
+  <header><span class="logo-text">WTF?</span></header>
   <div class="container">
     <section class="hero">
       <div class="hero-info">
-        <h1>NFC NetKey</h1>
-        <p>An NFC-enabled key that allows you to easily share your contact information or digital content with a simple tap.</p>
+        <h1>WTFtag <span class="emoji">😆</span></h1>
+        <p>A tiny device for epic pranks! Just bring it close to your friend's phone - and suddenly, a wild, ridiculous, or totally bizarre sound blasts from their speakers.</p>
+        
+        <div class="discount-banner">
+          🔥 Special discount valid until the end of April! 🔥
+        </div>
         
         <!-- Gallery added here -->
         <div class="gallery">
           <button class="gallery-btn gallery-prev">&#10094;</button>
           <div class="gallery-container">
             <div class="gallery-item">
-              <img src="img_basic.jpg" alt="NFC NetKey - Front view">
+              <img src="img_basic.jpg" alt="WTFtag - Front view">
             </div>
             <div class="gallery-item">
-              <img src="/api/placeholder/500/300" alt="NFC NetKey - Sharing contact">
+              <img src="/api/placeholder/500/300" alt="WTFtag - Pranking friends">
             </div>
             <div class="gallery-item">
-              <img src="/api/placeholder/500/300" alt="NFC NetKey - In use">
+              <img src="/api/placeholder/500/300" alt="WTFtag - Reaction shot">
             </div>
             <div class="gallery-item">
-              <img src="/api/placeholder/500/300" alt="NFC NetKey - Close-up">
+              <img src="/api/placeholder/500/300" alt="WTFtag - Close-up">
             </div>
           </div>
           <button class="gallery-btn gallery-next">&#10095;</button>
@@ -132,32 +181,35 @@
         </div>
         
         <p class="price">€4.00</p>
-        <p>Join the waitlist now and receive a special discount!</p>
+        <p>No apps. No downloads. No extra software. Just your WTFtag - and let the fun begin! 😂</p>
+        <p><strong>Join our waitlist!</strong> This is for early registration only - not an immediate purchase. Be among the first to get notified when WTFtag becomes available.</p>
       </div>
       <form class="form" action="https://formspree.io/f/xyzeoovy" method="POST">
         <input type="email" name="email" placeholder="Email address" required>
         <input type="text" name="country" placeholder="Country">
         <input type="text" name="city" placeholder="City">
-        <button type="submit">Notify me</button>
+        <button type="submit">Join Waitlist</button>
       </form>
     </section>
     
     <section class="section">
       <h2>How it works</h2>
       <ul>
-        <li>Tap the NFC NetKey to any compatible smartphone.</li>
-        <li>Your contact info or content is instantly shared.</li>
-        <li>No apps, no registration, just one tap.</li>
+        <li>Attach the WTFtag to the back of a phone (NFC must be enabled)</li>
+        <li>Phone must be turned on and connected to a network</li>
+        <li>The phone will open a link and prompt to press a button</li>
+        <li>A hilarious sound will blast from the speakers</li>
+        <li>Watch your friends jump in surprise! 😂</li>
       </ul>
     </section>
 
     <section class="section">
-      <h2>Use Cases</h2>
-      <p>Perfect for networking, business meetings, or sharing social media profiles on the go.</p>
+      <h2>Why WTFtag?</h2>
+      <p>Perfect for bringing smiles and laughter to your friends, boosting their mood and creating positive emotions. It's the ultimate conversation starter and party trick!</p>
     </section>
 
     <section class="section video">
-      <h2>See NFC NetKey in action</h2>
+      <h2>See WTFtag in action</h2>
       <div style="text-align: center; max-width: 605px; margin: 0 auto;">
         <blockquote class="tiktok-embed" 
           cite="https://www.tiktok.com/@wtftags/video/7487951698980326678?_t=ZM-8vVHRe9SK7J&_r=1" 
@@ -167,7 +219,6 @@
         </blockquote>
         <script async src="https://www.tiktok.com/embed.js"></script>
       </div>
-      <p>Replace @username and VIDEO_ID with your TikTok username and video ID.</p>
     </section>
   </div>
   
